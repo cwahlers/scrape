@@ -27,12 +27,6 @@ app.use(bodyParser.urlencoded({
 // Make public a static dir
 app.use(express.static("public"));
 
-// Database configuration with mongoose
-//mongoose.connect("mongodb://localhost/hw18scrape");
-// mongoose.connect("mongodb://heroku_sf716p4j:3tnrvfduaadugdb7eefb6760a6@ds161580.mlab.com:61580/heroku_sf716p4j");
-//mongoose.connect("mongodb://admin:admin@ds161640.mlab.com:61640/hw18scrape");
-
-
 
 var db = process.env.MONGODB_URI || "mongodb://localhost/hw18scrape";
 mongoose.connect(db, function(error){
@@ -42,17 +36,6 @@ mongoose.connect(db, function(error){
     console.log("success connect to DB")
   }
 })
-
-// Show any mongoose errors
-// db.on("error", function(error) {
-//   console.log("Mongoose Error: ", error);
-// });
-
-// Once logged in to the db through mongoose, log a success message
-// db.once("open", function() {
-//   console.log("Mongoose connection successful.");
-// });
-
 
 // Routes
 // ======
