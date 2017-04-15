@@ -28,8 +28,9 @@ app.use(express.static("public"));
 
 // Database configuration with mongoose
 //mongoose.connect("mongodb://localhost/hw18scrape");
-//mongoose.connect("mongodb://heroku_sf716p4j:3tnrvfduaadugdb7eefb6760a6@ds161580.mlab.com:61580/heroku_sf716p4j");
-mongoose.connect("mongodb://cwahlers:KyleCole1@ds161580.mlab.com:61580/heroku_sf716p4j");
+mongoose.connect("mongodb://heroku_sf716p4j:3tnrvfduaadugdb7eefb6760a6@ds161580.mlab.com:61580/heroku_sf716p4j");
+//mongoose.connect("mongodb://admin:admin@ds161640.mlab.com:61640/hw18scrape");
+
 
 var db = mongoose.connection;
 
