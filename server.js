@@ -1,3 +1,4 @@
+//MONGODB_URI: mongodb://heroku_sf716p4j:3tnrvfduaadugdb7eefb6760a6@ds161580.mlab.com:61580/heroku_sf716p4j
 // Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -26,7 +27,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/hw18scrape");
+//mongoose.connect("mongodb://localhost/hw18scrape");
+mongoose.connect("mongodb://heroku_sf716p4j:3tnrvfduaadugdb7eefb6760a6@ds161580.mlab.com:61580/heroku_sf716p4j")
 var db = mongoose.connection;
 
 // Show any mongoose errors
